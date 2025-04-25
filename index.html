@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Workshop - Docker</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .card {
+      background: white;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+      overflow: hidden;
+      width: 300px;
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+    }
+
+    .card img {
+      width: 100%;
+      height: auto;
+      border-bottom: 1px solid #ccc;
+    }
+
+    .card span {
+      display: block;
+      padding: 15px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #1e3c72;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="card" target="_blank" href="https://wordwall.net/pt/resource/91049165/workshop-docker?ref=embed-image" id="dockerCard">
+    <img src="https://screens.cdn.wordwall.net/200/5f0aa5e19b814b8290cab99853faa842_0" alt="WORKSHOP - DOCKER">
+    <span>WORKSHOP - DOCKER</span>
+  </a>
+
+  <script>
+    // Efeito de clique
+    const card = document.getElementById('dockerCard');
+
+    card.addEventListener('click', () => {
+      card.style.boxShadow = '0 0 30px rgba(255,255,255,0.6)';
+      setTimeout(() => {
+        card.style.boxShadow = '0 8px 20px rgba(0,0,0,0.2)';
+      }, 300);
+    });
+  </script>
+
+</body>
+</html>
